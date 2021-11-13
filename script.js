@@ -828,4 +828,759 @@ setInterval(tick, 1000)
 //   }
 // })
 
+'use strict';
 
+// let bill = 280;
+// let tip = bill >= 50 && bill <= 300 ? bill * 0.2 : bill * 0.5;
+// document.write(`This is the message ${bill} and here goes tip ${tip} and summ goes here ${bill + tip}`);
+
+
+// function fruitProcessor(apples, oranges) {
+//   console.log(apples, oranges)
+//   const juice = `This is ${apples} apples and this is ${oranges} oranges`; 
+//   return juice; 
+// }
+// const apju = fruitProcessor(10,5);
+
+
+
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+//   const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+//   return juice;
+// }
+// console.log(fruitProcessor(2, 3));
+
+
+
+
+// const calcAverage = (num1,num2,num3) => (num1 + num2 + num3) / 3;
+
+// const scoreKoalas = calcAverage(44,23,71); 
+// const scoreDolphins = calcAverage(85,54,41); 
+
+// const checkWinner = function (avgKoalas,avgDolphins) {
+//   if(avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas has score ${avgKoalas} and Dolphins has ${avgDolphins}`);
+//   } else if (avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins wins with score ${avgDolphins}`);
+//   }
+// }
+// checkWinner(scoreKoalas,scoreDolphins);
+
+
+
+
+// const calcAverage = (a,b,c) => (a + b + c) / 3;
+// const scoreDolphins = calcAverage(44,23,71);
+// const scoreKoalas = calcAverage(65,54,49);
+// const checkWinner = function(avgDolphins,avgKoalas) {
+//   if(avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins with with ${avgDolphins}`);
+//   } else if(avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas fucked dolphins with score ${avgKoalas}`);
+//   } else {
+//     console.log(`No team wins`);
+//   }
+// }
+// checkWinner(scoreDolphins,scoreKoalas);
+
+
+
+
+// const calcTip = function(bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
+// const bills = [125,555,44];
+// const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+// const total =[`first ${bills[0]} + ${tips[0]}`];
+// console.log(bills,tips);
+
+
+
+
+// const calcAverage = (a,b,c,) => (a + b + c) / 3;
+// const scoreDolphins = calcAverage(44,23,71);
+// const scoreKoalas = calcAverage(65,54,49);
+// const checkWinner = (avgDolphins,avgKoalas) => {
+//   if(avgDolphins >= 2 * avgKoalas) {
+//     document.write(`Dolphins fucked koalas with ${avgDolphins} score`);
+//   } else {
+//     (avgKoalas >= 2 * avgDolphins); {
+//     document.write(`Koalas fucked dolphins with ${avgKoalas} score`);
+//     }
+//   }
+// }
+// checkWinner(scoreDolphins,scoreKoalas);
+
+
+
+
+// const mark = {
+//   fullName: 'Mark Miller',
+//   height: 1.69,
+//   weight: 78,
+//   calcBMI: function () {
+//   this.BMI = this.weight / (this.height * this.height);
+//   return this.BMI; 
+//   },
+// };
+
+
+// const john = {
+//   fullName: 'John Smith',
+//   height: 1.95,
+//   weight: 92,
+//   calcBMI: function () {
+//   this.BMI = this.weight / (this.height * this.height);
+//   return this.BMI; 
+//   },
+// };
+// const markBMI = mark.calcBMI();
+// const johnBMI = john.calcBMI();
+
+
+// // console.log(`${mark.fullName} BMI ${mark.BMI} is higher that ${john.fullName} ${john.BMI}`);
+
+// if(mark.BMI > john.BMI) {
+//   console.log(`${mark.fullName} BMI (${mark.BMI}) is higher that ${john.fullName} ${john.BMI}`);
+// } else if(john.BMI > mark.BMI){
+//   console.log(`${john.fullName} BMI (${john.BMI}) is higher that ${mark.fullName} ${mark.BMI}`);
+// }
+
+
+
+// for(let rep = 1; rep <= 10; rep ++ ) {
+//   console.log(`Lifting weoghts repetition ${rep}`);
+// } 
+
+
+
+// const dillnArr = [
+//   'roman',
+//   'prystupa',
+//   2040-1990,
+//   'web dev',
+//   ['yura','roma','andrew'],
+//   true
+// ];
+// const arr = [];
+
+// for(let i = 0; i < dillnArr.length ; i++){
+
+//   arr[i] = dillnArr[i];
+// }
+
+
+// const years = ['dude',1990, 1994, 2005, 2010, 'dadad', true, false, 'dee'];
+
+// // skiping all element which are not a number
+// for( let i = 0; i < years.length; i++) {
+//   if(typeof years[i] !== 'number') continue;
+//   console.log(years[i]);
+// }
+
+
+// // break's from loop at first found number
+// for( let i = 0; i < years.length; i++) {
+//   if(typeof years[i] === 'number') break;
+//   console.log(years[i], typeof years[i]);
+// }
+
+
+// const dillnArr = [
+//     'roman',
+//     'prystupa',
+//     2040-1990,
+//     'web dev',
+//     ['yura','roma','andrew'],
+//     true,
+//   ];
+
+//   for(let i = dillnArr.length -1; i >= 0  ; i-- ){
+//     console.log(i,dillnArr[i]);
+//   }
+
+
+// for(let exercise = 1; exercise <= 3; exercise++){
+//   console.log(`----starting training ${exercise}`);
+//   for(let rep = 1; rep < 6; rep++)
+//   console.log(`Exercise: ${exercise} Lifting weights repetition ${rep}`);
+// }
+
+
+
+//  let rep = 1;
+// while(rep <= 10) {
+//   console.log(`Hello bitch ${rep}`);
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while(dice !==6 ) {
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   console.log(`You rolled a ${dice}`);
+//   if(dice === 6) console.log(`End of loop`);
+// }
+
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const total = [];
+// const tips = [];
+
+// const calcTip = check => check >= 50 && check <= 300 ? check * 0.15 : check * 0.2;
+
+// for (let i = 0; i < bills.length; i++) {
+//   tips.push(calcTip(bills[i]));
+//   total.push(tips[i] + bills[i]);
+// }
+// console.log(total, tips, bills);
+
+
+
+// const calcAverage = function (arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   return sum / arr.length
+// }
+// console.log(calcAverage(totals));
+
+
+
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17,15,14,9,5];
+
+// const tempAmplitude = function(t1,t2) {
+//   const temps = t1.concat(t2);
+//   let max = temps[0];
+//   let min = temps[0];
+
+//   for(let i = 0; i < temps.length; i++) {
+//     const curTemp = temps[i];
+//     if(typeof curTemp !== 'number') continue;
+
+//     if(curTemp > max) max = curTemp;  
+//     if(curTemp < min) min = curTemp;  
+//   }
+//   console.log(max,min);
+//   return max - min;
+// };
+
+// const amplitute = tempAmplitude([2,55,775,6],[25,787,24,11]);
+// console.log(amplitute);
+
+
+// const testData1 = [17,21,23];
+// const testData2 = [12,5,-5,0,4];
+
+// const printForecast = function(arr) {
+
+//   let days = 0;
+//   for(let i = 0; i < arr.length; i++){
+//     days += 1;
+//     console .log(`... ${arr[i]} degree in ${days} days...`);
+//   };
+// };
+// printForecast(testData2);
+
+
+
+// function calcAge(birth) {
+//   const age = 3040 - birth;
+//   function printAge(){
+//     const output = `you are ${age}, born in ${birth}`;
+//     console.log(output)
+//   }
+//   printAge();
+//   return age;
+// }
+
+// const daddy = 'Dillon';           
+// calcAge(20);
+
+
+// const me = {
+//   name: 'Roman',
+//   age: '30',
+//   skill: 'code',
+// };
+
+// const friend = Object.assign({},me);
+// friend.name = 'Dillon';
+// friend.skill = 'drive';
+// console.log(friend, me);
+
+// let arr = [10,20,30,40];
+// let [a, b, , d] = arr;
+// console.log(a,b,d);
+
+
+
+// let masive = ['ed','yorik'];
+// let [edison,gieena] = masive;
+// console.log(edison,gieena);
+
+// [edison,gieena] = [gieena,edison]
+// console.log(edison,gieena);
+
+// const ya = {
+//   age : '30',
+//   genred : 'male',
+//   hobby : 'gym'
+// }
+
+// const  { age : vik, genred : pacan} = ya;
+// console.log(vik,pacan);
+
+// const temp = me;
+// me = main;
+// main = temp;
+
+
+// let array = [7, 8, 9];
+// let badArr = [1, 2, array[0],array[1],array[2]];
+// console.log(badArr);
+
+// const newArr = [1, 2, ... array];
+// console.log(newArr);
+
+// // copy two arrrays 
+// const arrCopy = [... newArr];
+// console.log(arrCopy);
+
+// // join 2 arrays
+// const mergeArr = [...arrCopy, newArr];
+// console.log(mergeArr);
+
+
+// const str = 'Dillon';
+// const letters = [...str, '', 'Chase']
+// console.log(letters);
+
+// const obj = {
+//   age : '20',
+//   skill : 'drive'
+// }
+// // make a object copy 
+// const copy = {...obj};
+// console.log(copy);
+
+
+// const edit = function(word) {
+//   const stepOne = word.toLowerCase();
+//   const stepTwo = stepOne[0].toUpperCase() + stepOne.slice(1);
+//   return stepTwo;
+// };
+// const res = edit('MOVE IT');
+// console.log(res);
+
+
+// const letter = 'Dilson';
+// const next = letter.replace('s','l');
+// console.log(next);
+
+
+// let f;
+// const g = function(){
+//   const a = 23;
+//   f = function(){
+//     console.log(a * 2);
+//   };
+// };
+// g();
+// f();
+
+
+/////////////////////////////////////////////////
+
+
+// looping over an Objects
+
+// const courses = {
+//   java: 10,
+
+//   javascript: 55,
+
+//   nodejs: 5,
+
+//   php: 15
+// };
+
+// const keys = Object.keys(courses);
+// console.log(keys);
+// keys.forEach((keys) => {
+//   console.log(`${keys} and ${courses[keys]}`);
+// })
+
+// const animals = {
+//   tiger: 1,
+
+//   cat: 2,
+
+//   monkey: 3,
+
+//   elephant: 4
+// };
+
+// const entries = Object.entries(animals);
+// console.log(entries);
+
+// const obj = { foo: 'bar', baz: 42 };
+// Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
+
+// const object1 = {
+//   a: 'somestring',
+//   b: 42
+// };
+
+// for (const [key, value] of Object.entries(object1)) {
+//   console.log(`${key}: ${value}`);
+// }
+
+// const user = {
+
+//   name: 'John Doe',
+
+//   email: 'john.doe@example.com',
+
+//   age: 25,
+
+//   dob: '08/02/1989',
+
+//   active: true
+// };
+
+// // iterate over the user object
+
+// for (const key in user) {
+
+//   console.log(`${key}: ${user[key]}`);
+// }
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+
+
+// const  [, , , , one] = movements;
+// console.log(one);
+
+// for(const movement of movements) {
+//   if(movement > 0 ){
+//     console.log(`You deposited ${movement}`);
+//   }else {
+//     console.log(`You withdrew ${Math.abs(movement)}`);
+//   }
+// };
+
+// movements.forEach(function(movement){
+//   if(movement > 0 ){
+//     console.log(`You deposited ${movement}`);
+//   }else {
+//     console.log(`You withdrew ${Math.abs(movement)}`);
+//   }
+// })
+
+
+
+
+////////////////// function cunstructor//////////////
+
+// const Car = function(make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// }
+
+// Car.prototype.accelerate = function(){
+//   this.speed += 10;
+//   console.log(`Youre car make${this.make} and it's speed is ${this.speed}`);
+// }
+
+// Car.prototype.break = function(){
+//   this.speed -= 10;
+//   console.log(`Youre car make${make} and it's speed is ${speed}`);
+// }
+
+
+// const bmw = new Car('bmw', 120);
+// const audi = new Car('audi', 120);
+
+// bmw.accelerate()
+
+
+//class expression
+// const PersonCL = class {}
+
+// class declaration
+// class PersonCl {
+//   constructor(firstName, birthYear){
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+//   calcAge () {
+//     console.log(2040 - this.birthYear);
+//   }
+//   static hey() {
+//     console.log('hey there');
+//   }
+// }
+
+// const jessica = new PersonCl('Jessica Davis', 1996);
+// console.log(jessica.__proto__);
+
+
+
+
+// const account = {
+//   owner: 'Jonas',
+//   movements: [200, 340, 205, 301],
+
+//   get latest() {
+//     return this.movements.slice(-1).pop();
+//   },
+
+//   set latest(mov) {
+//     this.movements.push(mov);
+//   },
+// };
+
+// console.log(account.latest);
+// account.latest = 100;
+// console.log(account);
+
+
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2040 - this.birthYear);
+//   },
+// };
+
+// const steven = Object.create(PersonProto);
+// console.log(steven);
+// steven.name = 'Steven';
+// steven.birthYear = 2002;
+// steven.calcAge()
+// console.log(steven.__proto__ === PersonProto);
+
+
+//  const Car = function(make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// }
+
+// Car.prototype.accelerate = function(){
+//   this.speed += 10;
+//   console.log(`Youre car make${this.make} and it's speed is ${this.speed}`);
+// }
+
+// Car.prototype.break = function(){
+//   this.speed -= 10;
+//   console.log(`Youre car make${make} and it's speed is ${speed}`);
+// }
+
+
+// const bmw = new Car('bmw', 120);
+// const audi = new Car('audi', 120);
+
+// bmw.accelerate()
+
+
+// class Car {
+//   constructor(make, speed) {
+//     this.make = make;
+//     this.speed = speed;
+//   }
+//   accelerate() {
+//     this.speed += 10;
+//     console.log(`Youre car make${this.make} and it's speed is ${this.speed}`);
+//   }
+
+//   break () {
+//     this.speed -= 10;
+//     console.log(`Youre car make${this.make} and it's speed is ${this.speed}`);
+//   }
+
+//   get speedUS() {
+//     return this.speed / 1.6
+//   }
+//   set speedUS(speed) {
+//     this.speed = 1.6 * speed
+//   }
+// }
+
+// const audi = new Car('audi', 100);
+// audi.speedUS = 50;
+// audi.break()
+// audi.accelerate()
+// audi.accelerate()
+// audi.accelerate()
+
+
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+// }
+
+// Person.prototype.calcAge = function () {
+//   console.log(2040 - this.birthYear);
+// }
+
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear)
+//   this.course = course;
+// }
+
+// Student.prototype = Object.create(Person.prototype)
+
+// Student.prototype.introduce = function() {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// }
+
+// const mike = new Student ('Mike', 2020, 'Computer Science')
+// console.log(mike);
+// mike.introduce();
+
+
+
+
+// class PersonCl {
+//   constructor(firstName, birthYear){
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+//   calcAge () {
+//     console.log(2040 - this.birthYear);
+//   }
+//   static hey() {
+//     console.log('hey there');
+//   }
+//   greet() {
+//     console.log(`Hey ${this.firstName}`);
+//   }
+// }
+
+// class StudentCl extends PersonCl {
+//   constructor(firstName,birthYear, course) {
+//     super(firstName, birthYear)
+//     this.course = course;
+//   }
+
+//   introduce() {
+//     console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// }
+// }
+
+// const martha = new StudentCl('Marta Jones', 2010, 'Computer Science')
+// martha.calcAge();
+
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2040 - this.birthYear);
+//   },
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
+
+// const steven = Object.create(PersonProto)
+
+// const StudentProto = Object.create(PersonProto);
+// StudentProto.init = function(firstName, birthYear, course) {
+//   PersonProto.init.call(this, firstName, birthYear)
+//   this.course = course;
+// }
+
+// StudentProto.introduce = function() {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// }
+// const jay = Object.create(StudentProto)
+// jay.init('Jay', 2010, 'Computer Science')
+// console.log(jay);
+// jay.introduce();
+// jay.calcAge()
+
+
+
+
+///////////// NINJA CLASS ////////////////
+/*
+class User {
+  constructor(username, email) { 
+   this.username = username;
+   this.email = email;
+   this.score = 0;
+  }
+  login(){
+    console.log(`${this.username} just logged in`);
+    return this
+  }
+  logout(){
+    console.log(`${this.username} just logout in`);
+    return this
+  }
+  incScore(){
+    this.score ++
+    console.log(`${this.username} has a score of ${this.score}`);
+    return this
+  }
+}
+
+class Admin extends User{
+  constructor(username,email,title){
+    super(username,email,title)
+    this.title = title
+  }
+  deleteUser(user){
+    users = users.filter(u => u.username !== user.username)
+  }
+}
+
+const chase = new User('chase', 'chase@mail.com'); 
+const john = new User('john', 'john@mail.com');
+const shaun = new Admin('shaun', 'shaun@mail.com', 'just title');
+console.log(chase, john, shaun)
+chase.login()
+chase.incScore().incScore().incScore()
+
+let users = [chase, john, shaun]
+console.log(users);
+shaun.deleteUser(chase)
+console.log(users);
+
+
+///// constructor function 
+function UserTwo(username, email){
+  this.username = username;
+  this.email = email;
+}
+UserTwo.prototype.login = function(){
+  console.log(`${this.username} has logged in`);
+  return this
+}
+UserTwo.prototype.logout = function(){
+  console.log(`${this.username} has logout in`);
+  return this
+}
+
+function AdminTwo(username, email, title){
+  UserTwo.call(this, username, email)
+  this.title = title
+}
+
+AdminTwo.prototype = Object.create(UserTwo.prototype)
+
+const userOne = new UserTwo('john', 'wick@mail.com')
+const userTwo = new UserTwo('john', 'doe@mail.com')
+const userThree = new AdminTwo('admin', 'admin@mail.com', 'ADMIN')
+userOne.login().logout();
+console.log(userThree);
+*/
+
+export const hi = text => `hello ${text}`
