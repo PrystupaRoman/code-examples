@@ -1584,3 +1584,343 @@ console.log(userThree);
 */
 
 export const hi = text => `hello ${text}`
+
+
+//////////////////// Colt Js
+
+// const palette = {
+//   red : '#eb4d4b',
+//   yellow : '#f9ca24',
+//   blue : '#30336b'
+// }
+// let mysteryColor = 'yellow'
+// console.log(palette[mysteryColor]);
+
+// const gameBoard = [
+//   [4,24,63,34],
+//   [14,77,13,34],
+//   [65,63,43,34],
+//   [84,24,63,34]
+// ]
+
+// let totalScore = 0
+// for(let i = 0; i < gameBoard.length; i++){
+//   let row = gameBoard[i]
+//   for(let j = 0; j < row.length; j++){
+//     totalScore += row[j]
+//   }
+// }
+// console.log(totalScore);
+
+// const target = Math.floor(Math.random() * 10)
+// let guess = Math.floor(Math.random() * 10)
+//   while(guess !== target) {
+//     console.log(`Target:${target} Guess: ${guess}`);
+//     guess = Math.floor(Math.random() * 10)
+//   }
+//   console.log(`Target:${target} Guess: ${guess}`);
+//   console.log('Congrats you win')
+
+//   while(true) {
+//     if(target === guess) break
+//     console.log(`Target:${target} Guess: ${guess}`);
+//     guess = Math.floor(Math.random() * 10)
+//   }
+//   console.log(`Target:${target} Guess: ${guess}`);
+//   console.log('Congrats you win')
+
+
+
+// const randNum = [
+//   [4, 24, 63, 34],
+//   [14, 77, 13, 34],
+//   [65, 63, 43, 34],
+//   [84, 24, 63, 34]
+// ]
+
+
+// let totalSum = 0
+// for(let i = 0; i < randNum.length; i++){
+//   let row = randNum[i]
+//   //  console.log(row);
+//   for(let j = 0; j < row.length; j++){
+//   //  console.log(row[j]);
+//    totalSum += row[j]
+//   }
+// }
+
+// for (let row of randNum) {
+//   let sum = 0 
+//   for (let num of row) {
+//     sum += num
+//   }
+//   console.log(`${row} summed to ${sum}`);
+// }
+
+
+// const words1 = ['mail', 'milk', 'bath', 'black']
+// const words2 = ['box', 'shake', 'tub', 'berry']
+// for (let i = 0; i < words1.length; i++) {
+//   console.log(`${words1[i]} ${words2[i]}`);
+// }
+
+// function isValidPassword(password, username) {
+//   if (password.length < 8 || password.indexOf(' ') !== -1 || password.indexOf(username) !== -1) {
+//     return false
+//   }
+//   return true
+// }
+
+
+// // function isValidPassword(password, username) {
+// //   if (password.length < 8) {
+// //     return false
+// //   }
+// //   if (password.indexOf(' ') !== -1) {
+// //     return false
+// //   }
+// //   if (password.indexOf(username) !== -1) {
+// //     return false
+// //   }
+// //   return true
+// // }
+
+
+// // function isValidPassword(password, username) {
+// //   const paslength = password.length < 8
+// //   const contSpace = password.indexOf(' ') !== -1
+// //   const sameAspass = password.indexOf(username) !== -1
+// //   return !paslength && !contSpace && !sameAspass
+// // }
+
+// // function average(data) {
+// //   let sum = 0
+// //   for (let i = 0; i < data.length; i++) {
+// //     sum += data[i] / data.length
+// //   }
+// //   return sum
+// // }
+// // console.log(average([0, 50]));
+
+// // function isPangram(sentence) {
+// //   const lowerCased = sentence.toLowerCase()
+// //   for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+// //     if (lowerCased.indexOf(char) === -1) {
+// //     if (!lowerCased.includes(char)) {
+// //       return false
+// //     }
+// //     return true
+// //   }
+// // }
+
+// // console.log(isPangram('some random text'));
+
+
+// function pick(arr){
+//  const idx = Math.floor(Math.random() * arr.length)
+//  return arr[idx]
+// }
+
+// function getCard(){
+//   const cards = [6,7,8,9,10,'J','Q','K','A']
+//   const suits = ['clubs', 'spades', 'hearts', 'diamonds']
+//   // const card = pick(cards)
+//   // const suit = pick(suits)
+//   // const idxCard = Math.floor(Math.random() * cards.length) ///// const idxCard = card[Math.floor(Math.random() * cards.length)]
+//   // const cardFinal = cards[idxCard]
+//   // const idxSuit = Math.floor(Math.random() * suit.length) /////  const idxSuit = suit[Math.floor(Math.random() * suit.length)]
+//   // const suitFinal = suit[idxSuit]
+//   return { card: pick(cards), suit: pick(suits) }
+// }
+
+
+
+// // function getRandomArbitrary(min, max) {
+// //   return Math.floor(Math.random() * (max - min)) + min;
+// // }
+
+// // console.log(getRandomArbitrary(20,10));
+
+// function multiplyBy(num){
+//   return function(x) {
+//     return x * num
+//   }
+// }
+// const halve = multiplyBy(.5)
+
+// const words = ['dog', 'dig', 'log', 'bag']
+// const allEndInG = words.every(word => {
+//   const last = word.length-1
+//   return word[last] === 'g'
+// })
+
+
+// const grades = [55,75,32,98,51,86,77]
+
+// // const maxGrades = grades.reduce((max, val) => {
+// //   if(val > max) return val
+// //   return max
+// // })
+
+// const maxGrades = grades.reduce((max, val) => {
+//   return Math.max(max, val)
+// })
+
+// const minGrades = grades.reduce((min, val) => {
+//   return Math.min(min, val)
+// })
+
+
+// const votes = ['y','y','y','n','n','y','y','n','y','n','y']
+
+// const results = votes.reduce((tally, val) => {
+//   if(tally[val]) {
+//     tally[val]++
+//   } else {
+//     tally[val] = 1
+//   }
+//   return tally
+// }, {})
+
+// const results2 = votes.reduce((tally, val) => {
+//   tally[val] = (tally[val] || 0) + 1
+//   return tally
+// },{})
+
+// const books = [ 
+//   {author: 'Dick Novitz',
+//    page: 240,
+//    country: 'Sweden'
+//   },
+//   {author: 'John Wick',
+//    page: 300,
+//    country: 'USA'
+//   },
+//   {author: 'Simply Me',
+//    page: 140,
+//    country: 'Ukraine'
+//   }
+// ]
+
+// const [{country}, ,{author: dillon}] = books
+
+// const response = [ 
+//   'HTTP/1.1',
+//   '200 OK',
+//   'application/json'
+// ]
+
+// function parseResponse([protocol, statusCode, contentType]){
+//   console.log(`Status: ${statusCode}`);
+// }
+
+// const user = {};
+// const key = 'firstName'
+// user[key] = 'Harshal';
+// console.log(user);
+
+// const role = 'host'
+// const person = 'Jools Holland'
+// const team = {
+//   [role]: person
+// }
+
+// ////////////// Computed properties
+// const team1 = {
+//   name: 'roman',
+//   age: 31
+// }
+// function addProp(obj, k, v){
+//   const copy = {...obj}
+//   copy[k] = v
+//   return copy
+// }
+// const res = addProp(team1, 'fuck', 'off')
+// console.log(res);
+
+// const foo = (k,v) => {
+//   return {[k]: v}
+// }
+// const foores = foo('dillon','fuckoff')
+// console.log(foores);
+
+
+// const avatar = {
+//   first: 'Cherilyn',
+//   last: 'Sarkisian',
+//   nickName: 'Cher',
+//   fullName() {
+//     const {
+//       first,
+//       last,
+//       nickName
+//     } = this;
+//     return `${first} ${last} AKA ${nickName}`;
+//   },
+//   printBio() {
+//     console.log(this);
+//     const fullName = this.fullName()
+//     console.log(`${fullName} is a person`);
+//   }
+// }
+
+// const printBio = avatar.printBio()
+
+
+// const annoyer = {
+//   pharases : ['literally', 'cray cray', 'i can\'t even', 'YOLO', 'Can\'t stop'],
+//   pickPhrase() {
+//     // const pharases = this.pharases
+//     const {pharases} = this
+//     const idx = Math.floor(Math.random() * pharases.length)
+//     return pharases[idx]
+//   },
+//   start(){
+//     this.timerId = setInterval(() => {
+//       console.log(this.pickPhrase());
+//     },2000)
+//   },
+//   stop() {
+//     clearInterval(this.timerId)
+//     console.log('We done');
+//   }
+// }
+
+// // console.log(annoyer.pickPhrase());
+
+
+// /////////// For of iteration and destructuring
+// const people = [
+//   {
+//     name: 'Mike Smith',
+//     family: {
+//       mother: 'Jane Smith',
+//       father: 'Harry Smith',
+//       sister: 'Samantha Smith'
+//     },
+//     age: 35
+//   },
+//   {
+//     name: 'Tom Jones',
+//     family: {
+//       mother: 'Norah Jones',
+//       father: 'Richard Jones',
+//       brother: 'Howard Jones'
+//     },
+//     age: 25
+//   }
+// ];
+
+// for (const {name: n, family: {father: f}} of people) {
+//   console.log('Name: ' + n + ', Father: ' + f);
+// }
+
+
+// const h1 = document.querySelector('.heading')
+// const parag = document.querySelector('.paragraph')
+// const li = document.querySelectorAll('li')
+
+// for(let i = 0; i < li.length; i++) {
+//   // li[i].innerText = 'Fuck off'
+//   li[i].style.color = "red"
+// }
