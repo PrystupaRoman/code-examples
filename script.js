@@ -1,4 +1,81 @@
 "use strict";
+
+/// NET NINJA UI LIBRARY
+class Tooltip {
+  constructor(element) {
+    this.element = element;
+    this.message = element.getAttribute('data-message');
+  }
+  init() {
+    const tip = document.createElement('div');
+    tip.classList.add('tip');
+    tip.textContent = this.message;
+    this.element.appendChild(tip);
+
+    this.element.addEventListener('mouseenter', () => {
+      tip.classList.add('active')
+    })
+    this.element.addEventListener('mouseleave', () => {
+      tip.classList.remove('active')
+    })
+  }
+}
+
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
+tooltip.init();
+
+
+
+
+
+class Dropdown {
+  constructor(container) {
+    this.container = container
+    this.trigger = container.querySelector('.trigger')
+    this.content = container.querySelector('.content')
+  }
+  init() {
+    this.trigger.addEventListener('click', () => {
+      this.trigger.classList.toggle('active')
+      this.content.classList.toggle('active')
+    })
+  }
+}
+
+const dropdowns = document.querySelectorAll('.dropdown')
+
+dropdowns.forEach(dropdown => {
+  const instance = new Dropdown(dropdown)
+  instance.init()
+})
+
+
+class Snackbar {
+  constructor() {
+    this.snackbar = document.createElement('div')
+  }
+  init() {
+    this.snackbar.classList.add('snackbar')
+    document.querySelector('body').appendChild(this.snackbar)
+  }
+  show(message) {
+    this.snackbar.textContent = message
+    this.snackbar.classList.add('active')
+    setTimeout(() => {
+      this.snackbar.classList.remove('active')
+    },1000)
+  }
+}
+
+const snackbar = new Snackbar()
+snackbar.init()
+
+const button = document.querySelector('button')
+button.addEventListener('click', () => {
+  snackbar.show('you clicked me')
+})
+
+
 // let markWeight = 78;
 // let markHeight = 1.7;
 // let johnWeight = 92;
