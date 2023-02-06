@@ -2001,3 +2001,208 @@ export const hi = text => `hello ${text}`
 //   // li[i].innerText = 'Fuck off'
 //   li[i].style.color = "red"
 // }
+
+
+
+///////////////////////////////////////
+
+const foo = function (card) {
+  const stepOne = card + ''
+  const stepTwo = stepOne.slice(-4)
+  const final = stepTwo.padStart(stepOne.length, '*')
+  return final
+}
+console.log(foo(471847187581));
+
+
+
+const num = [1, 2, 3, 4, 5, 6, 7]
+const color = ['red', 'blue', 'green', 'yellow', 'white']
+
+const pick = random => {
+  const ran = Math.floor(Math.random() * random.length)
+  return random[ran]
+
+}
+
+const obj = {
+  color: pick(color),
+  num: pick(num)
+}
+console.log(obj);
+
+
+// const todos = document.querySelector('.todos')
+// const el = todos.querySelector('li')
+// todos.removeChild(el)
+
+
+const btn = document.querySelector('button')
+btn.addEventListener('mouseover', () => {
+  const height = Math.floor(Math.random() * window.innerHeight)
+  const width = Math.floor(Math.random() * window.innerWidth)
+  btn.style.left = `${width}px`
+  btn.style.top = `${height}px`
+})
+
+
+const body = document.querySelector('body')
+const colors = [
+  'red', 'orange', 'blue', 'yellow', 'gray', 'violet', 'indigo', 'green'
+]
+
+const changeColor = function () {
+  const h1 = document.querySelector('h1')
+  h1.style.color = this.style.backgroundColor
+}
+
+for (let color of colors) {
+  const div = document.createElement('div')
+  div.style.backgroundColor = color
+  div.style.height = '50px'
+  div.style.width = '200px'
+  body.append(div)
+  div.addEventListener('click', changeColor)
+}
+
+
+const addItemInput = document.querySelector('#addItem')
+const itemsUl = document.querySelector('#items')
+
+addItemInput.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    if (!this.value) return
+    const newItemText = this.value;
+    const newItem = document.createElement('li')
+    newItem.innerText = newItemText
+    itemsUl.appendChild(newItem)
+    this.value = ''
+  }
+})
+
+
+const cc = document.querySelector('#cc')
+const check = document.querySelector('#per')
+const select = document.querySelector('#vib')
+const form = document.querySelector('#signup-form')
+const formData = {}
+// form.addEventListener('input', e => {
+//   console.log('changed', e);
+//   formData['cc'] = e.target.value
+// })
+
+for (let input of [cc, select, check]) {
+  input.addEventListener('input', ({target}) => {
+    const { name,type,value,checked} = target
+    console.log(type);
+    console.log(name);
+    formData[name] = type === 'checkbox' ? checked : value
+    console.log(formData)
+  })
+}
+
+
+
+
+/////////// Promise
+// const willGetYouADog = new Promise((resolve, reject) => {
+//   const rand = Math.random()
+//   if (rand < 0.5) {
+//     resolve()
+//   } else {
+//     reject()
+//   }
+// })
+// willGetYouADog.then(() => {
+//   console.log('what\'s up');
+// })
+// willGetYouADog.catch(() => {
+//   console.log('error');
+// })
+
+
+const makeDogPromise = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const rand = Math.random()
+      if (rand < 0.5) {
+        resolve()
+      } else {
+        reject()
+      }
+    },1000)
+  })
+}
+
+makeDogPromise()
+.then(() => {
+  console.log('fuck off');
+})
+.catch(() => {
+  console.log('error');
+})
+
+
+// const fakeRequest = (url) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const rand = Math.random()
+//       if( rand < 0.3){
+//         reject({status: 404})
+//       } else {
+//         resolve({status: 200})
+//       }
+//     },2000)
+//   })
+// }
+
+// fakeRequest()
+//  .then((data) => {
+//    console.log(data.status);
+//    console.log('everything fine');
+//  })
+//  .catch((res) => {
+//    console.log(res.status);
+//    console.log('request failed');
+//  })
+
+
+//  const firstReq = new XMLHttpRequest()
+//  firstReq.addEventListener('load', function(){
+//    console.log('It worked !!!');
+//    const data = JSON.parse(this.responseText)
+//   //  for(let info of data.userId){
+//   //    console.log(data.serId);
+//   //    console.log(data);
+//   // }
+//      console.log(data);
+  
+//  })
+//  firstReq.addEventListener('error', () => {
+//    console.log('error !!!');
+//  })
+//  firstReq.open('GET', 'https://jsonplaceholder.typicode.com/posts')
+//  firstReq.send()
+
+
+//  const newReq = fetch('https://jsonplaceholder.typicode.com/posts')
+//  .then((response) => {
+//   response.json().then((data) => {
+//     for(let info of data){
+//       console.log(info.title);
+//     }
+//   })
+//  })
+
+ 
+
+async function greet() {
+  return 'Hello'
+}
+greet().then((val) => {
+  console.log('Fuck off', val);
+})
+.catch((err) => {
+  console.log(err);
+}) 
+
