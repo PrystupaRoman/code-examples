@@ -75,6 +75,126 @@ button.addEventListener('click', () => {
   snackbar.show('you clicked me')
 })
 
+//////////////// BRAD TRAVERSY
+function Person(firstName, lastName) {
+  this.firstName = firstName
+  this.lastName = lastName
+}
+
+Person.prototype.greeting = function() {
+  return `Hello there ${this.firstName} ${this.lastName}`
+}
+
+const person1 = new Person( 'roman', 'prystupa')
+// console.log(person1.greeting());
+
+
+function Customer(firstName, lastName, phone, membership) {
+  Person.call(this, firstName, lastName)
+  this.phone = phone
+  this.membership = membership
+}
+
+//inherit 
+Customer.prototype = Object.create(Person.prototype)
+Customer.prototype.constructor = Customer
+
+const customer1 = new Customer('tom', 'smith', '55555-5555', 'premium')
+console.log(customer1.greeting());
+
+const personPrototypes = {
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`
+  },
+  getsMarried(newLastName) {
+    this.lastName = newLastName
+  }
+}
+
+const mary = Object.create(personPrototypes)
+mary.firstName = 'Mary'
+mary.lastName = 'Williams'
+mary.age = 30
+mary.getsMarried('Thomspson')
+
+console.log(mary.greeting());
+
+const brad = Object.create(personPrototypes, {
+  firstName: {value: 'Brad'},
+  lastName: {value: 'Traversy'},
+})
+
+console.log(brad.greeting());
+
+
+class Human{
+  constructor(firstName,lastName, dob){
+    this.firstName = firstName
+    this.lastName = lastName
+    this.birthday = new Date(dob)
+  }
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`
+  }
+  calculateAge() {
+    const diff = Date.now() - this.birthday.getTime()
+    const ageDate = new Date(diff)
+    return Math.abs(ageDate.getUTCFullYear() - 1980)
+  }
+}
+
+const per = new Human('mary', 'poppins', '11-13-1990')
+console.log(per.calculateAge());
+console.log(per);
+
+
+class Goku {
+  constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`
+  }
+}
+
+class Vegeta extends Goku {
+  constructor(firstName, lastName, phone, membership) {
+    super(firstName, lastName)
+    this.phone = phone
+    this.membership = membership
+  }
+}
+
+const gohan = new Vegeta('trunks','bulma', 'vodafone', 'future')
+console.log(gohan);
+
+
+function Barber(age, skill) {
+  this.age = age
+  this.skill = skill
+}
+
+Barber.prototype.cut = function(){
+  return `barber age ${this.age} and ${this.skill}`
+}
+
+
+const newbie = new Barber(4, 'slickback')
+console.log(newbie.cut())
+
+function Admin(salary, requirement) {
+  this.salary = salary
+  this.requirement = requirement
+}
+
+Admin.prototype.cut = function(){
+  return `hello bitch`
+}
+
+Admin.prototype = Object.create(Barber.prototype)
+Admin.prototype.constructor = Admin
+
 
 // let markWeight = 78;
 // let markHeight = 1.7;
